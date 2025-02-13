@@ -1157,4 +1157,16 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
-  // Attacher le gestion
+  // Attacher le gestionnaire d'événement pour tous les boutons "Ajouter à vos favoris"
+  const favoriteButtons = document.querySelectorAll(".favorite-button");
+  favoriteButtons.forEach(function(button) {
+    button.addEventListener("click", function() {
+      addToFavorites(button);
+      trackClick('Ajout Favoris', 'Interaction', 0);
+    });
+  });
+});
+</script>
+  
+</body>
+</html>
